@@ -1,22 +1,4 @@
-<template>
-  <div class="home">
-    <DashboardCharacter v-bind:character="dummyChar" />
-    <h1>Title</h1>
-  </div>
-</template>
-
-<script>
-// @ is an alias to /src
-import DashboardCharacter from "@/components/DashboardCharacter.vue";
-
-export default {
-  name: "home",
-  components: {
-    DashboardCharacter
-  },
-  data: function() {
-    return {
-      dummyChar: {
+{
     "lastModified": 1578354455000,
     "name": "Nierpal",
     "realm": "Blackhand",
@@ -51,13 +33,3 @@ export default {
       "averageItemLevelEquipped": 408
     }
 }
-    };
-  }
-};
-</script>
-
-<style>
-body {
-  background-color: #5d5d5d;
-}
-</style>
