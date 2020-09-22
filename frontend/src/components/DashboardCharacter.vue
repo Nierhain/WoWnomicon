@@ -1,12 +1,14 @@
 <template>
-  
+  <v-card>
+    <v-card-title>{{ characterName }}</v-card-title>
+  </v-card>
 </template>
 
 <script>
 export default {
     name: "DashboardCharacter",
     props: {
-        character: Object
+        character: Array
     },
     computed: {
     characterName: function () {
@@ -18,17 +20,17 @@ export default {
     avatarUrl: function() {
       return (
         "http://render-eu.worldofwarcraft.com/character/" +
-        this.character.thumbnail
+        this.character.avatarURL
       );
     },
     itemLevel: function() {
-      return this.character.items.averageItemLevelEquipped;
+      return this.character.itemlevel;
     },
-    guildName: function() {
-      return this.character.guild.name;
+    guild: function() {
+      return this.character.guild;
     },
-    charClass: function() {
-      return classToString(this.character.class);
+    className: function() {
+      return this.character.className;
     }
     }
 }

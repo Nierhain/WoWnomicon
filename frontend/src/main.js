@@ -4,8 +4,10 @@ import '@mdi/font/css/materialdesignicons.css';
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
+import Vuex from 'vuex';
 
 Vue.use(Vuetify);
+Vue.use(Vuex);
 
 import App from './App.vue';
 
@@ -13,10 +15,12 @@ Vue.config.productionTip = false;
 Vue.config.devtools = true;
 
 import Wails from '@wailsapp/runtime';
+import router from './router';
+
 
 Wails.Init(() => {
 	new Vue({
-		vuetify: new Vuetify({
+        vuetify: new Vuetify({
 			icons: {
 				iconfont: 'mdi'
 			},
@@ -24,6 +28,8 @@ Wails.Init(() => {
 				dark: true
 			}
 		}),
-		render: h => h(App)
-	}).$mount('#app');
+
+        router,
+        render: h => h(App)
+    }).$mount('#app');
 });
