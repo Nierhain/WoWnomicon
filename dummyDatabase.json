@@ -1,0 +1,35 @@
+[
+    {
+        "name" : "Niermonk",
+        "level" : 120,
+        "classID" : 10,
+        "className" : "monk",
+        "race" : "pandaren",
+        "currentRole": "tank",
+        "avatarURL": "blackhand/101/110829413-avatar.jpg",
+        "itemlevel": "439",
+        "guild" : "Venom"
+    },
+    {
+        "name" : "Niermonk",
+        "level" : 120,
+        "classID" : 10,
+        "className" : "monk",
+        "race" : "pandaren",
+        "currentRole": "tank",
+        "avatarURL": "blackhand/101/110829413-avatar.jpg",
+        "itemlevel": "439",
+        "guild" : "Venom"
+    },
+    {
+        "name" : "Niermonk",
+        "level" : 120,
+        "classID" : 10,
+        "className" : "monk",
+        "race" : "pandaren",
+        "currentRole": "tank",
+        "avatarURL": "blackhand/101/110829413-avatar.jpg",
+        "itemlevel": "439",
+        "guild" : "Venom"
+    }
+]
