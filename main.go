@@ -1,12 +1,42 @@
 package main
 
 import (
+  "io/ioutil"
+  "os"
+  "path"
+
   "github.com/leaanthony/mewn"
   "github.com/wailsapp/wails"
 )
 
-func basic() string {
-  return "Hello World!"
+type professions struct {
+  firstProfession string;
+  secondProfession string;
+  cookingProfession string;
+  cookingSkill int;
+  archaeologySkill int;
+}
+
+type character struct {
+  name string;
+  level int;
+  classID int;
+  className string;
+  race string;
+  currentRole string;
+  avatarURL string;
+  itemlevel int;
+  guild string;
+}
+
+func getDummy() (string, error) {
+	cwd, err := os.Getwd()
+	if err != nil {
+		return " ", err
+	}
+	filename := path.Join(cwd, "dummyDatabase.json")
+	result, err := ioutil.ReadFile(filename)
+	return string(result), err
 }
 
 func main() {
@@ -17,11 +47,11 @@ func main() {
   app := wails.CreateApp(&wails.AppConfig{
     Width:  1280,
     Height: 768,
-    Title:  "wownomicon",
+    Title:  "WoWnomicon",
     JS:     js,
     CSS:    css,
     Colour: "#131313",
   })
-  app.Bind(basic)
+  app.Bind(getDummy)
   app.Run()
 }
